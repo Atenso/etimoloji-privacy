@@ -1,187 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Etimoloji</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etymora — Privacy Policy</title>
 <style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    max-width: 720px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.6;
-    color: #1a1a2e;
+  :root{
+    --bg:#faf7f1; --fg:#22201c; --muted:#5f5951; --rule:#e0d8c9;
+    --card:#f3ede2; --accent:#17304a;
   }
-  h1 {
-    font-size: 1.8em;
-    margin-bottom: 0.2em;
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14181d; --fg:#e6dcc6; --muted:#a49b8a; --rule:#2b3239;
+      --card:#1b2128; --accent:#c9b48a;
+    }
   }
-  .updated {
-    color: #666;
-    font-size: 0.9em;
-    margin-bottom: 2em;
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:2.5rem 1.25rem 4rem;
   }
-  h2 {
-    margin-top: 1.8em;
-    font-size: 1.25em;
-    color: #2d2d5f;
-  }
-  ul {
-    padding-left: 1.3em;
-  }
-  .placeholder {
-    background: #fff3cd;
-    padding: 2px 6px;
-    border-radius: 4px;
-  }
+  main{max-width:44rem;margin:0 auto}
+  h1{font-size:1.9rem;line-height:1.2;margin:0 0 .35rem;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:.92rem;margin:0 0 2.25rem}
+  h2{font-size:1.15rem;margin:2.5rem 0 .6rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
+  h3{font-size:1rem;margin:1.6rem 0 .4rem}
+  p,li{color:var(--fg)}
+  ul{padding-left:1.2rem}
+  li{margin:.3rem 0}
+  a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:1rem 1.15rem;margin:1.2rem 0}
+  .card p:first-child{margin-top:0}
+  .card p:last-child{margin-bottom:0}
+  table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.95rem;display:block;overflow-x:auto}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-weight:600;color:var(--muted);font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
+  footer{margin-top:3rem;padding-top:1.4rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem}
 </style>
 </head>
 <body>
+<main>
 
-<h1>Privacy Policy for Etimoloji</h1>
-<p class="updated">Last updated: August 25, 2026</p>
+<h1>Privacy Policy</h1>
+<p class="sub">Etymora &middot; Last updated 26 August 2026</p>
 
-<p>
-  This Privacy Policy explains how the Etimoloji app ("the App") handles
-  information. Etimoloji is a "Word of the Day" widget app that shows the
-  user a new word each day along with its meaning, pronunciation, and
-  etymology.
-</p>
+<p>Etymora is a word-etymology app for Android, developed by Atenso. This policy explains what the app stores, where it stores it, and how you can remove it.</p>
 
-<h2>Signing In Is Optional</h2>
-<p>
-  This is the most important thing to understand about how the App handles
-  your information:
-</p>
+<div class="card">
+<p><strong>The short version.</strong> Etymora works fully without an account and without an internet connection. In that mode, everything you do stays on your device. If you choose to sign in with Google, a copy of your learning progress is stored in the cloud so you can restore it on another device. We do not sell your data, and we do not use your learning progress for advertising.</p>
+</div>
+
+<h2>1. Using Etymora without an account</h2>
+<p>You can use every feature of Etymora without signing in. In this mode, the following is stored only on your device and is never sent to us or anyone else:</p>
 <ul>
-  <li>
-    <strong>Signing in is optional.</strong> The App works fully without an
-    account.
-  </li>
-  <li>
-    <strong>If you do not sign in,</strong> none of your data ever leaves
-    your device.
-  </li>
-  <li>
-    <strong>If you do sign in with Google,</strong> a copy of your progress
-    is stored in the cloud so you can keep it when you change or reset your
-    phone.
-  </li>
+  <li>Words you have viewed (your history)</li>
+  <li>Words you have marked as favourites</li>
+  <li>Words you have marked as learned, and your review progress</li>
+  <li>Your daily streak</li>
+  <li>Your settings (text size, notification preferences, reminder time)</li>
 </ul>
+<p>Uninstalling the app removes all of this.</p>
 
-<h2>What Is Stored in the Cloud</h2>
-<p>
-  The following is stored in the cloud <strong>only if you sign in</strong>:
-</p>
+<h2>2. Signing in with Google</h2>
+<p>Signing in is optional. Its only purpose is to let you restore your progress if you change or reset your device.</p>
+<p>When you sign in, Google shares a basic account identifier with the app so it knows which saved data belongs to you. Authentication is handled by <strong>Firebase Authentication</strong>, a Google service. We do not receive or store your Google password.</p>
+
+<h3>What is stored in the cloud</h3>
+<p>While signed in, a copy of the data listed in section 1 is stored in <strong>Google Cloud Firestore</strong> under an identifier tied to your account:</p>
+<table>
+  <tr><th>Data</th><th>Why</th></tr>
+  <tr><td>Favourites, history, learned words, review progress</td><td>So your progress survives a device change</td></tr>
+  <tr><td>Daily streak</td><td>So a reinstall does not reset your streak</td></tr>
+  <tr><td>App settings</td><td>So your preferences follow you</td></tr>
+  <tr><td>The date you first opened the app</td><td>The app introduces harder words gradually over time</td></tr>
+</table>
+<p>We do not store your name, your email address, your contacts, your location, or any content you write. The word list itself is bundled with the app and is the same for everyone.</p>
+
+<h2>3. Crash and performance data</h2>
+<p>Etymora uses <strong>Firebase Crashlytics</strong> to report crashes so we can fix them. A crash report contains diagnostic information about the failure — the device model, the Android version, and where in the app the error happened. It also includes a random installation identifier generated by Google.</p>
+<p>Crash reports do <em>not</em> contain your name, your email address, your Google account identifier, or the words you have looked up.</p>
+
+<h2>4. Notifications</h2>
+<p>Notifications are scheduled entirely on your device. Nothing about your reminders is sent to a server, and we cannot see whether you open them.</p>
+
+<h2>5. Who else can see your data</h2>
+<p>We do not sell your data and we do not share it with third parties for their own purposes.</p>
+<p>Google acts as our service provider for the features described above (Firebase Authentication, Cloud Firestore, Crashlytics) and processes this data on our behalf under Google's own terms. Your data is encrypted in transit.</p>
+<p>We may disclose data if we are legally required to do so.</p>
+
+<h2>6. Deleting your data</h2>
+<p>You can delete your data at any time from inside the app, without contacting us.</p>
+
+<h3>If you are signed in</h3>
+<p>Open <strong>Settings &rarr; Account</strong>. You will find two options:</p>
 <ul>
-  <li>Saved words (favourites)</li>
-  <li>Words you have seen (history)</li>
-  <li>Words you have marked as unearthed, and their review progress</li>
-  <li>Your daily streak and best streak</li>
-  <li>
-    Your app settings (font size, reminder time, notification preferences)
-  </li>
+  <li><strong>Delete cloud data</strong> — removes the copy stored in the cloud. Your Google account stays connected and the data on your device is kept.</li>
+  <li><strong>Delete account and all data</strong> — removes the cloud copy, disconnects your Google account from Etymora, and clears everything stored on this device.</li>
 </ul>
-<p>
-  When you sign in with Google, we also receive your <strong>name, email
-  address and profile picture</strong> from Google. These are used only to
-  show your account inside the App.
-</p>
+<p>For your security, Google may ask you to sign in again before an account can be deleted.</p>
 
-<h2>Where It Is Stored</h2>
-<p>
-  Cloud data is stored using <strong>Google Firebase</strong> (Firebase
-  Authentication and Cloud Firestore), operated by Google. This means your
-  data is held on Google's servers, and Google's own privacy policy also
-  applies to that data. You can read it at
-  <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.
-</p>
+<h3>If you are not signed in</h3>
+<p>Open <strong>Settings &rarr; Clear all my data</strong> to erase everything stored on your device.</p>
 
-<h2>Why It Is Stored</h2>
-<p>
-  There is a single purpose: to carry your progress between devices and to
-  prevent it from being lost when you change your phone or reinstall the
-  App.
-</p>
-<p>
-  Your data is <strong>not</strong> used for advertising, is
-  <strong>not</strong> sold, and is <strong>not</strong> shared with third
-  parties. The App does not include analytics or tracking.
-</p>
+<h3>Other ways</h3>
+<p>Uninstalling the app removes all data stored on your device. If you also want the cloud copy removed and can no longer access the app, email us at the address below and we will delete it.</p>
+<p>Crash reports are retained by Google for a limited period and are automatically deleted; because they are not linked to your account, they cannot be retrieved or removed individually.</p>
 
-<h2>Word Data</h2>
-<p>
-  The word list used by the App is bundled inside the App itself, so an
-  internet connection is not required to use it. If you are not signed in,
-  information about which words you look at stays on your device.
-</p>
+<h2>7. Advertising</h2>
+<p>Etymora does not show advertising at the time of writing. We may introduce it in a future version to support the app.</p>
+<p>If we do, we will update this page and our Google Play Data Safety declaration <em>before</em> any advertising appears in the app, and this section will describe what the advertising provider receives. We will not use the data described in section 2 &mdash; your favourites, history, learning progress or streak &mdash; to target advertising.</p>
 
-<h2>Permissions Used</h2>
-<ul>
-  <li>
-    <strong>Notifications:</strong> if you enable reminders, the App
-    requests permission to send you notifications. These notifications are
-    scheduled and generated entirely on your device; no data leaves your
-    device to produce them.
-  </li>
-  <li>
-    <strong>Internet and network state:</strong> used for Google sign-in and
-    for syncing your progress when you are signed in, and to check whether
-    you are online before starting the sign-in flow.
-  </li>
-</ul>
-<p>The App does not request access to your location, contacts, camera, microphone, or files.</p>
+<h2>8. Children</h2>
+<p>Etymora is not directed at children under 13 and we do not knowingly collect data from them. If you believe a child has provided us with data, contact us and we will remove it.</p>
 
-<h2>Third-Party Services</h2>
-<p>
-  The App uses Google Firebase for optional sign-in and cloud sync, as
-  described above. It does not integrate any advertising or tracking
-  services. Pronunciation playback uses your device's built-in
-  Text-to-Speech engine, which runs locally on your device.
-</p>
+<h2>9. Your rights</h2>
+<p>Depending on where you live, you may have the right to access, correct, export or delete the data we hold about you. The deletion tools in section 6 cover this directly; for anything else, email us and we will respond.</p>
 
-<h2>Deleting Your Data</h2>
-<p>
-  You can request deletion of your data by emailing
-  <strong>atensostudio@gmail.com</strong>. Please state which Google account
-  you signed in with, so that the correct data can be identified and
-  removed. Requests are processed within a reasonable period, and in any
-  case within 30 days.
-</p>
-<p>
-  Please note:
-</p>
-<ul>
-  <li>
-    <strong>Signing out of the App does not delete your cloud data.</strong>
-    To have it deleted, please send the request described above.
-  </li>
-  <li>
-    <strong>Uninstalling the App removes the data stored on your
-    device.</strong> If you had signed in, the copy stored in the cloud
-    remains until you request its deletion.
-  </li>
-</ul>
+<h2>10. Changes to this policy</h2>
+<p>If we change how Etymora handles data, we will update this page and change the date at the top. Significant changes will also be noted in the app.</p>
 
-<h2>Children's Privacy</h2>
-<p>
-  The App is not directed to children under 13, and we do not knowingly
-  collect information from them.
-</p>
+<h2>11. Contact</h2>
+<p>Atenso &mdash; <a href="mailto:atensostudio@gmail.com">atensostudio@gmail.com</a></p>
 
-<h2>Changes to This Policy</h2>
-<p>
-  We may update this Privacy Policy from time to time. Changes will be
-  posted on this page with an updated "Last updated" date.
-</p>
+<footer>
+Etymora is developed by Atenso. This page is the official privacy policy referenced on our Google Play store listing.
+</footer>
 
-<h2>Contact Us</h2>
-<p>
-  If you have any questions about this Privacy Policy, please contact us at:
-  <br>
-  atensostudio@gmail.com
-</p>
-
+</main>
 </body>
 </html>
