@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etymora — Delete your data</title>
+<style>
+  :root{
+    --bg:#faf7f1; --fg:#22201c; --muted:#5f5951; --rule:#e0d8c9;
+    --card:#f3ede2; --accent:#17304a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14181d; --fg:#e6dcc6; --muted:#a49b8a; --rule:#2b3239;
+      --card:#1b2128; --accent:#c9b48a;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding:2.5rem 1.25rem 4rem;
+  }
+  main{max-width:44rem;margin:0 auto}
+  h1{font-size:1.9rem;line-height:1.2;margin:0 0 .35rem;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:.92rem;margin:0 0 2.25rem}
+  h2{font-size:1.15rem;margin:2.5rem 0 .6rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
+  h3{font-size:1rem;margin:1.6rem 0 .4rem}
+  p,li{color:var(--fg)}
+  ul{padding-left:1.2rem}
+  li{margin:.3rem 0}
+  a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:1rem 1.15rem;margin:1.2rem 0}
+  .card p:first-child{margin-top:0}
+  .card p:last-child{margin-bottom:0}
+  table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.95rem;display:block;overflow-x:auto}
+  th,td{text-align:left;padding:.55rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top}
+  th{font-weight:600;color:var(--muted);font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
+  footer{margin-top:3rem;padding-top:1.4rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+
+<h1>Delete your Etymora data</h1>
+<p class="sub">Etymora, developed by Atenso &middot; Last updated 27 August 2026</p>
+
+<p>You can delete your Etymora account and your data yourself, from inside the app. You do not need to contact us and you do not need to wait for us.</p>
+
+<h2>If you are signed in</h2>
+<p>Open Etymora and go to <strong>Settings &rarr; Account</strong>. You will find two options:</p>
+
+<div class="card">
+<p><strong>Delete cloud data</strong><br>
+Deletes the copy of your progress stored in the cloud. Your Google account stays connected to Etymora, and the data on your phone is kept.</p>
+</div>
+
+<div class="card">
+<p><strong>Delete account and all data</strong><br>
+Deletes the cloud copy, deletes your account details from Firebase Authentication, disconnects your Google account from Etymora, and clears everything stored on your phone.</p>
+</div>
+
+<p>For your security, Google may ask you to sign in again before your account can be deleted. Your data is removed as soon as you confirm &mdash; there is no waiting period and no review.</p>
+
+<h2>If you are not signed in</h2>
+<p>Open <strong>Settings &rarr; Clear all my data</strong>. This erases everything Etymora has stored on your phone. Nothing of yours is held anywhere else, because data only leaves your device when you sign in.</p>
+
+<h2>What gets deleted</h2>
+<table>
+  <tr><th>Data</th><th>Deleted</th></tr>
+  <tr><td>Your Google account connection (name, email address, profile picture held by Firebase Authentication)</td><td>Immediately, with "Delete account and all data"</td></tr>
+  <tr><td>Favourites, history, learned words, review progress</td><td>Immediately</td></tr>
+  <tr><td>Daily streak and app settings</td><td>Immediately</td></tr>
+  <tr><td>The date you first opened the app</td><td>Immediately</td></tr>
+</table>
+
+<h2>What is kept, and for how long</h2>
+<p>Anonymous crash reports collected by Firebase Crashlytics are not linked to your account and cannot be traced back to you, so they are not removed by the steps above. Google deletes them automatically after a limited retention period. They contain diagnostic information about a failure &mdash; device model, Android version, where the error happened &mdash; and never your name, your email address, or the words you looked up.</p>
+<p>Nothing else is retained. We keep no backups of your account data after deletion.</p>
+
+<h2>If you can no longer open the app</h2>
+<p>If you have uninstalled Etymora and still want the cloud copy removed, email us at <a href="mailto:atensostudio@gmail.com">atensostudio@gmail.com</a> from the address you signed in with, and we will delete it for you.</p>
+
+<footer>
+Atenso &mdash; <a href="mailto:atensostudio@gmail.com">atensostudio@gmail.com</a><br>
+See also our <a href="./">privacy policy</a>.
+</footer>
+
+</main>
+</body>
+</html>
